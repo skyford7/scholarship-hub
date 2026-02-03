@@ -131,6 +131,6 @@ def logout():
 
 
 if __name__ == "__main__":
-    # Run the app. In production, you would use a WSGI server instead of
-    # the built‑in development server, and debug would be turned off.
-    app.run(debug=True)
+       port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
